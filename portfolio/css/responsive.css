@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Responsive rules — mobile-first overrides
+   ========================================================================== */
+
+/* Large desktop refinement */
+@media (min-width: 1200px) {
+  .container-custom { padding: 0 2.5rem; }
+}
+
+/* Tablet / small desktop */
+@media (max-width: 991px) {
+  :root { --section-pad-y: 6.5rem; }
+
+  .nav-links,
+  .nav-cta .btn-gold { display: none; }
+
+  .navbar-toggler-custom { display: flex; }
+
+  .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .hero-visual { order: -1; justify-content: flex-start; }
+  .portrait-frame { max-width: 300px; }
+  .terminal-card { left: 0; bottom: -1.2rem; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+
+  .project-grid { grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+
+  .learning-grid { grid-template-columns: 1fr 1fr; }
+
+  .edu-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+  .github-panel { grid-template-columns: 1fr; gap: 2rem; }
+
+  .contact-grid { display: block; }
+  .contact-info { grid-template-columns: 1fr; column-gap: 0; }
+  .contact-info .inquiry-types,
+  .contact-info .hero-availability { grid-column: auto; }
+
+  .cursor-dot, .cursor-ring { display: none; }
+  .has-custom-cursor { cursor: auto; }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  :root { --section-pad-y: 4.5rem; }
+
+  body { font-size: 15px; }
+
+  .container-custom { padding: 0 1.25rem; }
+
+  .hero { padding-top: 6.5rem; min-height: auto; }
+  .hero-title { font-size: 2.1rem; }
+  .hero-role-line { font-size: 1.05rem; }
+  .hero-cta { flex-direction: column; align-items: stretch; }
+  .hero-cta .btn-gold, .hero-cta .btn-outline { justify-content: center; }
+
+  .portrait-frame { max-width: 100%; }
+  .terminal-card {
+    position: static;
+    margin-top: 1.4rem;
+    width: 100%;
+  }
+  .portrait-glow { display: none; }
+
+  .scroll-indicator { display: none; }
+
+  .section-subtitle { margin-bottom: 2.2rem; }
+
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+
+  .journey-track { padding-left: 1.6rem; }
+  .journey-item::before { left: -1.6rem; }
+
+  .skill-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .project-grid { grid-template-columns: 1fr; }
+
+  .exp-track { padding-left: 1.6rem; }
+  .exp-item::before { left: -1.6rem; }
+  .exp-card { padding: 1.5rem 1.4rem; }
+  .exp-head { flex-direction: column; }
+  .exp-duration { text-align: left; }
+
+  .learning-grid { grid-template-columns: 1fr; }
+
+  .github-panel { padding: 1.6rem; }
+  .github-activity-placeholder { grid-template-columns: repeat(14, 1fr); }
+
+  .footer-grid { flex-direction: column; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+
+  .back-to-top { right: 1.2rem; bottom: 1.2rem; width: 42px; height: 42px; }
+
+  .mobile-nav { width: 100vw; }
+}
+
+/* Ensure no horizontal scroll on any breakpoint */
+html, body { max-width: 100%; overflow-x: hidden; }
